@@ -1,43 +1,67 @@
 @extends('layouts.app')
 
-@section('title', 'Contact')
+@section('title', 'Profil Mahasiswa')
 
 @section('content')
-<div class="bg-white p-8 rounded-lg shadow">
-    <h1 class="text-4xl font-bold text-red-600 mb-4">
-        Hubungi Kami
+
+<div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 mt-10">
+
+```
+<div class="text-center">
+    <div class="w-24 h-24 mx-auto bg-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+    A
+</div>
+
+    <h1 class="text-3xl font-bold mt-4 text-gray-800">
+        Ahmad Muzaki
     </h1>
 
-    <form>
-        <div class="mb-4">
-            <input
-                type="text"
-                placeholder="Nama"
-                class="w-full border p-3 rounded"
-            >
-        </div>
-
-        <div class="mb-4">
-            <input
-                type="email"
-                placeholder="Email"
-                class="w-full border p-3 rounded"
-            >
-        </div>
-
-        <div class="mb-4">
-            <textarea
-                class="w-full border p-3 rounded"
-                rows="5"
-                placeholder="Pesan"
-            ></textarea>
-        </div>
-
-        <button
-            class="bg-blue-600 text-white px-5 py-2 rounded"
-        >
-            Kirim
-        </button>
-    </form>
+    <p class="text-gray-500">
+        Mahasiswa Teknik Informatika
+    </p>
 </div>
+
+<div class="mt-8">
+    <h2 class="text-xl font-semibold text-blue-600 mb-4">
+        Data Mahasiswa
+    </h2>
+
+    <div class="space-y-4">
+
+        <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold">Nama</span>
+            <span>Ahmad Muzaki</span>
+        </div>
+
+        <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold">NIM</span>
+            <span>F1A250002</span>
+        </div>
+
+        <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold">Program Studi</span>
+            <span>Teknik Informatika</span>
+        </div>
+
+        <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold">Universitas</span>
+            <span>Universitas Al-Ghifari</span>
+        </div>
+
+    </div>
+</div>
+
+<div class="mt-8 bg-blue-50 p-4 rounded-lg">
+    <h2 class="text-lg font-semibold text-blue-700 mb-2">
+        Tentang Saya
+    </h2>
+
+    <p class="text-gray-700">
+        Saya adalah mahasiswa Program Studi Teknik Informatika Universitas Al-Ghifari yang memiliki minat besar dalam bidang pemrograman dan pengembangan web. Saat ini saya sedang mempelajari Laravel, Git, GitHub, serta teknologi web modern untuk meningkatkan kemampuan dalam membangun aplikasi yang bermanfaat. Saya tertarik mempelajari pemrograman web karena ingin mampu membuat website dan aplikasi secara mandiri, memahami cara kerja sistem berbasis web, serta mempersiapkan diri untuk peluang karier yang lebih baik di masa depan.
+    </p>
+</div>
+```
+
+</div>
+
 @endsection

@@ -17,9 +17,9 @@
         </h1>
 
         <div class="space-x-4">
-            <a href="/" class="text-white hover:text-yellow-300">Home</a>
-            <a href="/about" class="text-white hover:text-yellow-300">About</a>
-            <a href="/contact" class="text-white hover:text-yellow-300">Contact</a>
+            <a href="/" class="text-white hover:text-yellow-300">Annisa</a>
+            <a href="/about" class="text-white hover:text-yellow-300">Ria</a>
+            <a href="/contact" class="text-white hover:text-yellow-300">Zaki</a>
         </div>
 
     </div>

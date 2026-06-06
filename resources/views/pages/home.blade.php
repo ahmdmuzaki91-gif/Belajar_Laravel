@@ -4,7 +4,6 @@
 
 @section('content')
 
-<<<<<<< HEAD
 <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 mt-10">
 
     <div class="text-center">
@@ -12,44 +11,12 @@
             A
         </div>
 
-        <h1 class="text-3xl font-bold mt-4 text-gray-800">
-=======
-<div class="max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-8 mt-10">
-
-    <div class="text-center">
-        <div class="w-32 h-32 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-5xl font-bold text-blue-600">
-            A
-        </div>
-
-        <h1 class="text-3xl font-bold text-gray-800 mt-4">
->>>>>>> c944778d17e96b73f558d940bd8ba23e4c9e7efa
-            Annisa Nurul Aulia
+         <h1 class="text-3xl font-bold mt-4 text-gray-800">
+           Annisa Nurul Aulia
         </h1>
-
-        <p class="text-gray-500">
+         <p class="text-gray-500">
             Mahasiswa Teknik Informatika
         </p>
-    </div>
-
-<<<<<<< HEAD
-    <div class="mt-8 space-y-4">
-        <div class="flex justify-between border-b pb-2">
-            <span class="font-semibold">Nama</span>
-            <span>Annisa Nurul Aulia</span>
-        </div>
-
-        <div class="flex justify-between border-b pb-2">
-            <span class="font-semibold">NIM</span>
-            <span>F1A250018</span>
-        </div>
-
-        <div class="flex justify-between border-b pb-2">
-            <span class="font-semibold">Program Studi</span>
-            <span>Teknik Informatika</span>
-        </div>
-    </div>
-
-=======
     <div class="mt-8">
         <h2 class="text-xl font-semibold text-blue-600 mb-4">
             Data Mahasiswa
@@ -85,9 +52,7 @@
             pengembangan web.
             Saya tertarik untuk mengembangkan aplikasi web yang modern dan mudah digunakan.
         </p>
-    </div>
-
->>>>>>> c944778d17e96b73f558d940bd8ba23e4c9e7efa
+</div>
 </div>
 
 @endsection
