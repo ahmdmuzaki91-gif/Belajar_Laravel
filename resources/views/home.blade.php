@@ -4,10 +4,10 @@
 
 @section('content')
 <div class="text-center max-w-2xl mx-auto my-12" data-aos="fade-up">
-    <span class="text-xs font-bold tracking-widest text-cyan-500 uppercase code-font">[ Project Tugas Akhir ]</span>
+    <span class="text-xs font-bold tracking-widest text-cyan-500 uppercase code-font">PORTAL MAHASISWA</span>
     <h1 id="hero-title"
 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-3 mb-4">
-        Direktori Mahasiswa <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Teknik Informatika</span>
+        Direktori Mahasiswa <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-sky-500">Program Studi Teknik Informatika</span>
     </h1>
     <p class="text-gray-400 text-sm md:text-base leading-relaxed">
         Selamat datang di platform repositori profil kelompok kami. Pilih salah satu entitas di bawah untuk melihat detail keahlian, riwayat, dan kontak medsos secara spesifik.
@@ -20,7 +20,7 @@ class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-3 mb-4">
         </div>
 
         <div class="text-center">
-            <h3 class="text-cyan-400 text-2xl font-bold">Laravel</h3>
+            <h3 class="text-blue-700 text-2xl font-bold">Laravel</h3>
             <p class="text-xs text-gray-500">Framework</p>
         </div>
 

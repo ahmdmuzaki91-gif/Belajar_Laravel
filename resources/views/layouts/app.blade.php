@@ -15,31 +15,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        body {
-        background:
-        radial-gradient(
-            circle at top,
-            rgba(6,182,212,.15),
-            transparent 40%
-        ),
-        #0b0f19;
-
-        color:#f1f5f9;
+        body{
+        background-color:#F8FAFC;
+        color:#1E293B;
         font-family:'Plus Jakarta Sans',sans-serif;
         }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
+            .code-font{
+        font-family:'Plus Jakarta Sans',sans-serif;
         }
-        .minimal-card {
-            background: rgba(22, 30, 49, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .minimal-card:hover {
-            border-color: #06b6d4;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
-        }
+     .minimal-card{
+    background:white;
+    border:1px solid #E2E8F0;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
+        
+     .minimal-card:hover{
+     border-color:#2563EB;
+    box-shadow:0 10px 25px rgba(37,99,235,.15);
+    transform:translateY(-5px);
+    }
         .profile-frame{
         position:relative;
     }
@@ -73,19 +67,19 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-    <nav class="border-b border-white/5 px-8 py-5 flex justify-between items-center backdrop-blur-md sticky top-0 z-50">
+    <nav class="bg-blue-900 shadow-lg">
     <div class="flex items-center gap-3">
     <i class="fas fa-laptop-code text-cyan-400 text-xl"></i>
 
     <div>
-        <h1 class="text-cyan-400 font-bold">
-            PORTAL INFORMATIKA
-        </h1>
+    <h1 class="font-bold text-xl text-white">
+        PORTAL MAHASISWA
+    </h1>
 
-        <p class="text-[10px] text-gray-500">
-            Direktori Mahasiswa
-        </p>
-    </div>
+    <p class="text-xs text-blue-200">
+        Teknik Informatika
+    </p>
+</div>
 </div>
     <div class="space-x-6 text-xs uppercase tracking-wider text-gray-400">
         <a href="/" class="hover:text-white transition-colors {{ Request::is('/') ? 'text-cyan-400 font-bold' : '' }}">Home</a>
@@ -97,7 +91,9 @@
     </main>
 
     <footer class="border-t border-white/5 py-6 text-center text-xs text-gray-500 code-font">
-        &copy; 2026 / TEKNIK INFORMATIKA / KELOMPOK_LARAVEL
+        &copy; © 2026 Program Studi Teknik Informatika
+
+                Universitas Al-Ghifari
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
