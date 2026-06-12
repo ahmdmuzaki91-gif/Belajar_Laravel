@@ -10,8 +10,10 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mt-4">
         
-        <div class="minimal-card aspect-square rounded-2xl border border-white/5 overflow-hidden relative shadow-lg">
-    <img src="{{ asset('image/ahmad muzaki.jpeg') }}" alt="Foto Ahmad Muzaki" class="w-full h-full object-cover">
+        <div class="profile-frame minimal-card aspect-square rounded-2xl border border-white/5 overflow-hidden relative shadow-lg">
+    <img
+    id="profile-photo"
+    src="{{ asset('image/ahmad muzaki.jpeg') }}" alt="Foto Ahmad Muzaki" class="w-full h-full object-cover">
     </div>
 
         <div class="md:col-span-2 space-y-6">
@@ -30,23 +32,23 @@
             <div>
                 <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// TECH_STACK</p>
                 <div class="flex flex-wrap gap-2 text-xs code-font">
-                    <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">PHP 8.x</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">Laravel 12</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">MySQL</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">TailwindCSS</span>
+                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">PHP 8.x</span>
+                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">Laravel 12</span>
+                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">MySQL</span>
+                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">TailwindCSS</span>
                 </div>
             </div>
 
             <div class="pt-4">
                 <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// SOCIAL_NETWORKS</p>
                 <div class="flex space-x-3">
-                    <a href="https://instagram.com/zack061107" target="_blank" class="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
+                    <a href="https://instagram.com/zack061107" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
                         <i class="fab fa-instagram text-sm"></i>
                     </a>
-                    <a href="https://github.com/ahmdmuzaki91-gif" target="_blank" class="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
+                    <a href="https://github.com/ahmdmuzaki91-gif" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
                         <i class="fab fa-github text-sm"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ahmad-muzaki-770abb315" target="_blank" class="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
+                    <a href="https://www.linkedin.com/in/ahmad-muzaki-770abb315" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-400 transition-all">
                         <i class="fab fa-linkedin-in text-sm"></i>
                     </a>
                 </div>
@@ -55,4 +57,26 @@
 
     </div>
 </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+
+    anime({
+    targets:'#profile-photo',
+    scale:[0.8,1],
+    opacity:[0,1],
+    duration:1500,
+    easing:'easeOutElastic'
+    });
+
+    anime({
+    targets:'.tech-item',
+    translateY:[20,0],
+    opacity:[0,1],
+    delay:anime.stagger(100),
+    duration:800
+    });
+
+    });
+    </script>
 @endsection
