@@ -23,14 +23,14 @@
             </div>
 
             <div class="border-t border-b border-white/5 py-4">
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-bold">// TENTANG_SAYA</p>
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-bold">//  Tentang Mahasiswa</p>
                 <p class="text-gray-300 text-sm leading-relaxed">
                     Tertarik mendalami arsitektur infrastruktur jaringan komputer dan administrasi server. Memiliki minat besar pada otomatisasi sistem Linux, manajemen Cloud Virtual Private Server (VPS), serta pengelolaan deployment aplikasi berbasis Laravel.
                 </p>
             </div>
 
             <div>
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// TECH_STACK</p>
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// Kompetensi Teknologi</p>
                 <div class="flex flex-wrap gap-2 text-xs code-font">
                     <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">PHP.8x</span>
                     <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">Laravel 12</span>
@@ -40,7 +40,7 @@
             </div>
 
             <div class="pt-4">
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// SOCIAL_NETWORKS</p>
+                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// Media Sosial</p>
                 <div class="flex space-x-3">
                     <a href="https://instagram.com/chycxaa" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-amber-400 transition-all">
                         <i class="fab fa-instagram text-sm"></i>

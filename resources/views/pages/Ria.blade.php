@@ -10,45 +10,61 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mt-4">
         
-         <div class="profile-frame minimal-card aspect-square rounded-2xl border border-white/5 overflow-hidden relative shadow-lg">
-    <img 
-    id="profile-photo"
-    src="{{ asset('image/ria adriani.jpeg') }}" alt="Foto Ahmad Muzaki" class="w-full h-full object-cover">
-    </div>
+        <div class="minimal-card p-4">
 
-        <div class="md:col-span-2 space-y-6">
-            <div>
-                <h1 class="text-3xl font-extrabold text-white tracking-tight">Ria Adriani</h1>
-                <p class="text-sm code-font text-emerald-400 mt-1">NIM. F1A250008 — Teknik Informatika</p>
-            </div>
+    <img
+        src="{{ asset('image/ria adriani.jpeg') }}"
+        class="rounded-xl w-full">
 
+</div>
+
+    <div class="md:col-span-2 space-y-6">
+        <div>
+
+        <h1 class="text-4xl font-bold text-blue-900">
+            Ria Adriani
+        </h1>
+
+        <p class="text-gray-500 mt-2">
+            NIM F1A250008
+        </p>
+
+        <p class="text-blue-600 font-medium mt-1">
+            Program Studi Teknik Informatika
+        </p>
+
+        </div>
             <div class="border-t border-b border-white/5 py-4">
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-bold">// TENTANG_SAYA</p>
+                <h2 class="text-xl font-semibold text-blue-900 mb-3">
+                    Tentang Mahasiswa
+                </h2>
                 <p class="text-gray-300 text-sm leading-relaxed">
                     Berfokus pada bidang User Interface (UI) dan User Experience (UX) Desain. Senang menerjemahkan kebutuhan pengguna menjadi wireframe, arsitektur informasi, hingga prototipe desain aplikasi tingkat tinggi yang siap diimplementasikan ke dalam kode front-end.
                 </p>
             </div>
 
             <div>
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// TECH_STACK</p>
+                <h2 class="text-xl font-semibold text-blue-900 mb-3">
+                    Kompetensi Teknologi
+                </h2>
                 <div class="flex flex-wrap gap-2 text-xs code-font">
-                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">PHP 8.x</span>
-                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">Laravel 12</span>
-                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">MySQL</span>
-                    <span class="tech-item px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-300">TailwindCSS</span>
+                    <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">PHP 8.x</span>
+                    <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Laravel 12</span>
+                    <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">MySQL</span>
+                    <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">TailwindCSS</span>
                 </div>
             </div>
 
             <div class="pt-4">
-                <p class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-bold">// SOCIAL_NETWORKS</p>
+                <h2 class="text-xl font-semibold text-blue-900 mb-3">Media Sosial</h2>
                 <div class="flex space-x-3">
-                    <a href="https://instagram.com/iiicescreaim" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-emerald-400 transition-all">
+                    <a href="https://instagram.com/iiicescreaim" target="_blank" class="w-10h-10rounded-fullbg-blue-50text-blue-700flexitems-centerjustify-centerhover:bg-blue-700hover:text-whitetransition">
                         <i class="fab fa-instagram text-sm"></i>
                     </a>
-                    <a href="https://github.com/riaa52633-maker" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-emerald-400 transition-all">
+                    <a href="https://github.com/riaa52633-maker" target="_blank" class="w-10h-10rounded-fullbg-blue-50text-blue-700flexitems-centerjustify-centerhover:bg-blue-700hover:text-whitetransition">
                         <i class="fab fa-github text-sm"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ria-adriani-5346443b1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-emerald-400 transition-all">
+                    <a href="https://www.linkedin.com/in/ria-adriani-5346443b1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="w-10h-10rounded-fullbg-blue-50text-blue-700flexitems-centerjustify-centerhover:bg-blue-700hover:text-whitetransition">
                         <i class="fab fa-linkedin-in text-sm"></i>
                     </a>
                 </div>

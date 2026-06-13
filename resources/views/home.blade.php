@@ -3,71 +3,78 @@
 @section('title', 'Selamat Datang')
 
 @section('content')
-<div class="text-center max-w-2xl mx-auto my-12" data-aos="fade-up">
-    <span class="text-xs font-bold tracking-widest text-cyan-500 uppercase code-font">PORTAL MAHASISWA</span>
-    <h1 id="hero-title"
-class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-3 mb-4">
-        Direktori Mahasiswa <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-sky-500">Program Studi Teknik Informatika</span>
-    </h1>
-    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-        Selamat datang di platform repositori profil kelompok kami. Pilih salah satu entitas di bawah untuk melihat detail keahlian, riwayat, dan kontak medsos secara spesifik.
+<section class="hero-bg rounded-3xl p-16 text-center text-white">
+
+    <p class="uppercase tracking-widest text-blue-200">
+        Portal Mahasiswa
     </p>
-        <div class="flex justify-center gap-10 mt-8">
 
-        <div class="text-center">
-            <h3 class="text-cyan-400 text-2xl font-bold">3</h3>
-            <p class="text-xs text-gray-500">Mahasiswa</p>
+    <h1 class="text-5xl font-bold mt-4">
+        Program Studi Teknik Informatika
+    </h1>
+
+    <p class="mt-6 text-lg text-blue-100 max-w-2xl mx-auto">
+        Direktori profil mahasiswa kelompok Laravel.
+        Klik salah satu mahasiswa untuk melihat
+        biodata, kompetensi dan media sosial.
+    </p>
+
+    <div class="flex justify-center gap-12 mt-10">
+
+        <div>
+            <h3 class="text-3xl font-bold">3</h3>
+            <p>Mahasiswa</p>
         </div>
 
-        <div class="text-center">
-            <h3 class="text-blue-700 text-2xl font-bold">Laravel</h3>
-            <p class="text-xs text-gray-500">Framework</p>
+        <div>
+            <h3 class="text-3xl font-bold">Laravel</h3>
+            <p>Framework</p>
         </div>
 
-        <div class="text-center">
-            <h3 class="text-cyan-400 text-2xl font-bold">2026</h3>
-            <p class="text-xs text-gray-500">Tugas Akhir</p>
+        <div>
+            <h3 class="text-3xl font-bold">2026</h3>
+            <p>Tahun</p>
         </div>
 
     </div>
-</div>
+
+</section>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
     
     <div class="minimal-card profile-card p-6 rounded-2xl flex flex-col justify-between">
         <div>
-            <div class="text-xs code-font text-gray-500 mb-2">NIM. F1A250002</div>
-            <h3 class="text-lg font-bold text-white mb-1">Ahmad Muzaki</h3>
-            <p class="text-xs text-cyan-400 code-font mb-4">Admin</p>
-        </div>
-        <a href="/profile/ahmad-muzaki" class="w-full text-center py-2.5 bg-white/5 hover:bg-cyan-500 hover:text-slate-950 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all duration-300">
-            Lihat Profil &rarr;
-        </a>
+            <div class="minimal-card p-8 text-center">
+
+    <div
+        class="w-20 h-20 rounded-full bg-blue-100 mx-auto mb-4 flex items-center justify-center">
+
+        <i class="fas fa-user text-blue-700 text-2xl"></i>
+
     </div>
+    <h3 class="text-xl font-bold text-slate-800"> Ahmad Muzaki</h3>
+    <p class="text-gray-500 mt-1">F1A250002</p>
+    <p class="text-blue-600 mt-2 font-medium">Admin</p>
+    <a href="/profile/ahmad-muzaki"class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl"> Lihat Profil</a>
+
+</div>
 
    <div class="minimal-card profile-card p-6 rounded-2xl flex flex-col justify-between">
         <div>
-            <div class="text-xs code-font text-gray-500 mb-2">NIM. F1A250008</div>
-            <h3 class="text-lg font-bold text-white mb-1">Ria Adriani</h3>
-            <p class="text-xs text-emerald-400 code-font mb-4">Kontributor</p>
-        </div>
-        <a href="/profile/mahasiswa-dua" class="w-full text-center py-2.5 bg-white/5 hover:bg-emerald-400 hover:text-slate-950 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all duration-300">
-            Lihat Profil &rarr;
-        </a>
+ <h3 class="text-xl font-bold text-slate-800">Ria Adriani</h3>
+    <p class="text-gray-500 mt-1">F1A250008</p>
+    <p class="text-blue-600 mt-2 font-medium">Kontributor</p>
+    <a href="/profile/ahmad-muzaki"class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl"> Lihat Profil</a>
     </div>
 
     <div class="minimal-card profile-card p-6 rounded-2xl flex flex-col justify-between">
         <div>
-            <div class="text-xs code-font text-gray-500 mb-2">NIM. F1A250018</div>
-            <h3 class="text-lg font-bold text-white mb-1">Annisa Nurul Aulia</h3>
-            <p class="text-xs text-amber-400 code-font mb-4">Kontributor</p>
+           <h3 class="text-xl font-bold text-slate-800"> Annisa Nurul Aulia</h3>
+    <p class="text-gray-500 mt-1">F1A250018</p>
+    <p class="text-blue-600 mt-2 font-medium">Kontributor</p>
+    <a href="/profile/ahmad-muzaki"class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl"> Lihat Profil</a>
         </div>
-        <a href="/profile/mahasiswa-tiga" class="w-full text-center py-2.5 bg-white/5 hover:bg-amber-400 hover:text-slate-950 rounded-xl text-xs font-semibold tracking-wider uppercase transition-all duration-300">
-            Lihat Profil &rarr;
-        </a>
     </div>
-
-</div>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 
