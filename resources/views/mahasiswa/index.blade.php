@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Mahasiswa')
-
 @section('content')
 
 <div class="mb-6">

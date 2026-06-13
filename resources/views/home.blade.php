@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Selamat Datang')
-
 @section('content')
 <section class="hero-bg rounded-3xl p-16 text-center text-white">
 
@@ -25,7 +23,7 @@
     <div class="flex justify-center gap-12 mt-10">
 
         <div class="text-center">
-        <h3 class="text-5xl font-bold text-white">
+        <h3 class="text-3xl font-bold text-white">
             {{ $mahasiswa->count() }}
         </h3>
         <p class="text-white/80">Mahasiswa</p>
