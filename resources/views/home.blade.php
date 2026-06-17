@@ -62,17 +62,7 @@
     </a>
 
 </div>
-    <div class="text-center mt-10">
 
-        <a
-            href="{{ route('mahasiswa.index') }}"
-            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">
-
-            Kelola Mahasiswa
-
-        </a>
-
-    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
 
     @forelse($mahasiswa as $mhs)
