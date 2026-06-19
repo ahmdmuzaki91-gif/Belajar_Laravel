@@ -76,7 +76,7 @@
 
             @endif
 
-            <a href="{{ route('portfolio.index') }}"
+            <a href="{{ route('portofolio.index') }}"
             class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-700">
                 <i class="fas fa-folder"></i>
                 Portofolio

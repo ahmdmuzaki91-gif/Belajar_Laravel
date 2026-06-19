@@ -3,7 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PortofolioController;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
@@ -19,7 +21,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('dashboard');
 
     Route::resource('mahasiswa', MahasiswaController::class);
-
+   
 });
 
 Route::middleware('auth')->group(function () {
@@ -28,15 +30,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-use App\Http\Controllers\PortfolioController;
-
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/portfolio', [PortfolioController::class, 'index'])
-        ->name('portfolio.index');
+    Route::get('/portofolio', [PortofolioController::class, 'index'])
+        ->name('portofolio.index');
 
-    Route::post('/portfolio', [PortfolioController::class, 'store'])
-        ->name('portfolio.store');
 
 });
 

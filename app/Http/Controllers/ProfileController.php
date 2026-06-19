@@ -26,7 +26,9 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
 {
+
     $user = $request->user();
+
 
     $user->fill($request->validated());
 
