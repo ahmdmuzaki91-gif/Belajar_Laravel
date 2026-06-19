@@ -46,7 +46,7 @@ use App\Http\Controllers\DosenController;
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/dosen', [DosenController::class, 'index'])
-        ->name('dosen.index');
+    Route::get('/dosen/data-mahasiswa', [DosenController::class, 'dataMahasiswa'])
+        ->name('dosen.mahasiswa');
 
 });

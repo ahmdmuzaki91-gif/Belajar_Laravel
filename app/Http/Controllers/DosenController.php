@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Mahasiswa; 
 
 class DosenController extends Controller
 {
-    public function index()
+    public function dataMahasiswa()
     {
-        $mahasiswa = User::where('role', 'mahasiswa')->get();
+        $mahasiswaSelesai = Mahasiswa::all();
 
-        $totalMahasiswa = $mahasiswa->count();
-
-        return view('dashboard.dosen', compact(
-            'mahasiswa',
-            'totalMahasiswa'
-        ));
+        return view('dashboard.data-mahasiswa', compact('mahasiswaSelesai'));
     }
 }
