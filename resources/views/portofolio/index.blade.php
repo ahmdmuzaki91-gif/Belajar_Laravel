@@ -1,9 +1,9 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Portfolio Saya')
+@section('title', 'Portofolio Saya')
 
 @section('menu')
-<a href="{{ route('portfolio.index') }}"
+<a href="{{ route('portofolio.index') }}"
    class="flex items-center gap-3 p-3 rounded-lg bg-blue-700 text-white">
 
     <i class="fas fa-folder"></i>
@@ -25,7 +25,7 @@
 
     <a href="#"
        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg">
-        + Tambah Portfolio
+        + Tambah Portofolio
     </a>
 
 </div>
