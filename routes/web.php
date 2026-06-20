@@ -35,6 +35,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/portofolio', [PortofolioController::class, 'index'])
         ->name('portofolio.index');
 
+    Route::get('/portofolio/create', [PortofolioController::class, 'create'])
+        ->name('portofolio.create');
+
 
 });
 
@@ -46,7 +49,7 @@ use App\Http\Controllers\DosenController;
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/dosen', [DosenController::class, 'index'])
-        ->name('dosen.index');
+    Route::get('/dosen/data-mahasiswa', [DosenController::class, 'dataMahasiswa'])
+        ->name('dosen.mahasiswa');
 
 });

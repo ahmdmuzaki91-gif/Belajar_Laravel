@@ -86,4 +86,9 @@ class MahasiswaController extends Controller
             ->route('mahasiswa.index')
             ->with('success', 'Data mahasiswa berhasil dihapus');
     }
+    public function dataMahasiswaDosen() 
+    {  
+    $mahasiswaSelesai = \App\Models\Mahasiswa::has('all'); 
+    return view('dashboard.data-mahasiswa', compact('mahasiswaSelesai'));
+    }
 }

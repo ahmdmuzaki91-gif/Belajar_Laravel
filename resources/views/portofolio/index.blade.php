@@ -23,10 +23,10 @@
         Kelola portofolio dan karya yang ingin ditampilkan.
     </p>
 
-    <a href="#"
-       class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg">
-        + Tambah Portofolio
-    </a>
+    <a href="{{ route('portofolio.create') }}"
+   class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg">
+    + Tambah Portofolio
+</a>
 
 </div>
 
