@@ -10,8 +10,13 @@ class PortofolioController extends Controller
 {
     return view('portofolio.index');
 }
+
+public function create()
+{
+    return view('portofolio.create');
+}
     public function store(Request $request)
     {
-        // nanti upload portofolio disini
+        
     }
 }

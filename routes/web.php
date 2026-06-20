@@ -35,6 +35,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/portofolio', [PortofolioController::class, 'index'])
         ->name('portofolio.index');
 
+    Route::get('/portofolio/create', [PortofolioController::class, 'create'])
+        ->name('portofolio.create');
+
 
 });
 
