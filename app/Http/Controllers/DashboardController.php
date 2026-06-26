@@ -18,3 +18,12 @@ class DashboardController extends Controller
         return view('dashboard.mahasiswa');
     }
 }
+use App\Models\Portofolio;
+
+$totalPortofolio = Portofolio::where(
+    'user_id',
+    auth()->id()
+)->count();
+return view('dashboard', compact(
+    'totalPortofolio'
+));
