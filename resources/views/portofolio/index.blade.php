@@ -35,6 +35,7 @@
                 <tr class="bg-blue-600 text-white">
                     <th class="p-4 text-left">Thumbnail</th>
                     <th class="p-4 text-left">Judul</th>
+                    <th class="p-4 text-left">Status</th>
                     <th class="p-4 text-left">Kategori</th>
                     <th class="p-4 text-left">Github</th>
                     <th class="p-4 text-left">Demo</th>
@@ -64,7 +65,25 @@
                         <div class="font-semibold text-gray-800">
                             {{ $portofolio->judul }}
                         </div>
+                    <td class="p-4">
 
+            @if($portofolio->status == 'pending')
+                 <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+            ⏳ Menunggu Review
+                </span>
+
+            @elseif($portofolio->status == 'approved')
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+            ✅ Disetujui
+                </span>
+
+            @else
+                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
+            ❌ Ditolak
+                </span>
+            @endif
+
+            </td>
                         <div class="text-sm text-gray-500">
                             {{ Str::limit($portofolio->deskripsi, 60) }}
                         </div>

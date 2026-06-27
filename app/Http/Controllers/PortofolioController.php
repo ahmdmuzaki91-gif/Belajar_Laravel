@@ -51,6 +51,7 @@ class PortofolioController extends Controller
             'file_portofolio' => $file,
             'github' => $request->github,
             'demo' => $request->demo,
+            'status' => 'pending',
         ]);
 
         return redirect()
