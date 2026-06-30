@@ -29,18 +29,42 @@
         @forelse($mahasiswaSelesai as $index => $mhs)
         <tr class="border-b hover:bg-gray-50 transition duration-150">
             <td class="p-4">{{ $index + 1 }}</td>
-            <td class="p-4 font-semibold text-gray-900">{{ $mhs->nama }}</td>
-            <td class="p-4">{{ $mhs->nim }}</td>
-            <td class="p-4">{{ $mhs->prodi }}</td>
-            <td class="p-4 text-center">
-                <span class="bg-green-100 text-green-800 py-1 px-3 rounded-full text-xs font-bold shadow-sm">
-                    Sudah Dikirim
-                </span>
-            </td>
+
+<td class="p-4 font-semibold text-gray-900">
+    {{ $mhs->user->name }}
+</td>
+
+<td class="p-4">
+    {{ $mhs->user->email }}
+</td>
+
+<td class="p-4 text-center">
+
+    @if($mhs->status == 'approved')
+
+        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">
+            Disetujui
+        </span>
+
+    @elseif($mhs->status == 'rejected')
+
+        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold">
+            Ditolak
+        </span>
+
+    @else
+
+        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold">
+            Menunggu Review
+        </span>
+
+    @endif
+
+</td>
         </tr>
     @empty
         <tr>
-            <td colspan="5" class="p-10 text-center text-gray-400 font-medium">
+            <td colspan="4" class="p-10 text-center text-gray-400 font-medium">
                 Belum ada data mahasiswa.
             </td>
         </tr>
