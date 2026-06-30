@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PortofolioController;
+use App\Http\Controllers\ReviewPortofolioController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,12 +33,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/portofolio', [PortofolioController::class, 'index'])
-        ->name('portofolio.index');
-
-    Route::get('/portofolio/create', [PortofolioController::class, 'create'])
-        ->name('portofolio.create');
-
+    Route::resource('portofolio', PortofolioController::class);
 
 });
 
@@ -52,4 +48,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dosen/data-mahasiswa', [DosenController::class, 'dataMahasiswa'])
         ->name('dosen.mahasiswa');
 
+    Route::get('/dosen/review-portofolio', [ReviewPortofolioController::class, 'index'])
+         ->name('review.index');
+
+    Route::patch('/dosen/review-portofolio/{id}/approve', [ReviewPortofolioController::class, 'approve'])
+        ->name('review.approve');
+
+    Route::patch('/dosen/review-portofolio/{id}/reject', [ReviewPortofolioController::class, 'reject'])
+        ->name('review.reject');
 });

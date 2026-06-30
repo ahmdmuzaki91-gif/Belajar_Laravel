@@ -9,26 +9,22 @@ class Portofolio extends Model
 {
     use HasFactory;
 
-    protected $table = 'mahasiswa'; 
+    protected $table = 'portofolios';
 
     protected $fillable = [
-        'user_id', 
-        'nama',   
-        'nim',
-        'prodi', 
-        'foto',
+        'user_id',
+        'judul',
+        'deskripsi',
+        'kategori',
+        'thumbnail',
+        'file_portofolio',
+        'github',
+        'demo',
+        'status'
     ];
 
-    public function User()
+    public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class);
     }
-
-     public function create()
-    {
-        return view('portofolio.create');
-    }
-
-    public function store(Request $request)
-    
 }

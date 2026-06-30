@@ -3,25 +3,28 @@
 @section('content')
 
 <div class="bg-white rounded-2xl shadow-lg p-8">
+
     <h1 class="text-3xl font-bold mb-6">
-        Tambah Portofolio
+        Edit Portofolio
     </h1>
 
-    <form action="{{ route('portofolio.store') }}"
+    <form action="{{ route('portofolio.update', $portofolio->id) }}"
           method="POST"
           enctype="multipart/form-data">
 
         @csrf
+        @method('PUT')
 
         <!-- Judul -->
         <div class="mb-4">
             <label class="block mb-2 font-medium">
                 Judul Portofolio
             </label>
+
             <input type="text"
                    name="judul"
-                   class="border p-3 w-full rounded"
-                   placeholder="Masukkan judul">
+                   value="{{ $portofolio->judul }}"
+                   class="border p-3 w-full rounded">
         </div>
 
         <!-- Deskripsi -->
@@ -29,10 +32,10 @@
             <label class="block mb-2 font-medium">
                 Deskripsi
             </label>
+
             <textarea name="deskripsi"
                       rows="5"
-                      class="border p-3 w-full rounded"
-                      placeholder="Deskripsi proyek"></textarea>
+                      class="border p-3 w-full rounded">{{ $portofolio->deskripsi }}</textarea>
         </div>
 
         <!-- Kategori -->
@@ -40,68 +43,70 @@
             <label class="block mb-2 font-medium">
                 Kategori
             </label>
+
             <select name="kategori"
                     class="border p-3 w-full rounded">
-                <option value="">Pilih Kategori</option>
-                <option value="Web">Web Development</option>
-                <option value="Mobile">Mobile Development</option>
-                <option value="UI/UX">UI/UX Design</option>
-                <option value="Data Science">Data Science</option>
+
+                <option value="Web"
+                    {{ $portofolio->kategori == 'Web' ? 'selected' : '' }}>
+                    Web Development
+                </option>
+
+                <option value="Mobile"
+                    {{ $portofolio->kategori == 'Mobile' ? 'selected' : '' }}>
+                    Mobile Development
+                </option>
+
+                <option value="UI/UX"
+                    {{ $portofolio->kategori == 'UI/UX' ? 'selected' : '' }}>
+                    UI/UX Design
+                </option>
+
             </select>
         </div>
 
         <!-- Thumbnail -->
         <div class="mb-4">
             <label class="block mb-2 font-medium">
-                Thumbnail Proyek
+                Thumbnail Baru
             </label>
+
             <input type="file"
                    name="thumbnail"
-                   accept="image/*"
                    class="border p-2 w-full rounded">
-        </div>
-
-        <!-- File Lampiran -->
-        <div class="mb-4">
-            <label class="block mb-2 font-medium">
-                Upload File
-            </label>
-            <input type="file"
-                   name="file_portofolio"
-                   class="border p-2 w-full rounded">
-            <small class="text-gray-500">
-                Mendukung PDF, DOCX, ZIP, PPT, dll.
-            </small>
         </div>
 
         <!-- Github -->
         <div class="mb-4">
             <label class="block mb-2 font-medium">
-                Link Github
+                Github
             </label>
+
             <input type="url"
                    name="github"
-                   class="border p-3 w-full rounded"
-                   placeholder="https://github.com/...">
+                   value="{{ $portofolio->github }}"
+                   class="border p-3 w-full rounded">
         </div>
 
         <!-- Demo -->
         <div class="mb-6">
             <label class="block mb-2 font-medium">
-                Link Demo
+                Demo
             </label>
+
             <input type="url"
                    name="demo"
-                   class="border p-3 w-full rounded"
-                   placeholder="https://...">
+                   value="{{ $portofolio->demo }}"
+                   class="border p-3 w-full rounded">
         </div>
 
         <button type="submit"
                 class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg">
-            Simpan Portofolio
+            Update Portofolio
         </button>
 
     </form>
+
 </div>
 
 @endsection
