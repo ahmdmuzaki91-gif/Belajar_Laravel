@@ -32,9 +32,21 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
 
+
     Route::resource('portofolio', PortofolioController::class);
 
+    Route::put(
+        '/portofolio/{id}/approve',
+        [PortofolioController::class, 'approve']
+    )->name('portofolio.approve');
+
+    Route::put(
+        '/portofolio/{id}/reject',
+        [PortofolioController::class, 'reject']
+    )->name('portofolio.reject');
+
 });
+
 
 Route::get('/my-profile', function () {
     return view('profile.user');

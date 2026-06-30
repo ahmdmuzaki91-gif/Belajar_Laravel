@@ -3,27 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Portofolio;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        if(auth()->user()->role == 'dosen')
-        {
-            $totalMahasiswa = User::where('role', 'mahasiswa')->count();
+        // Dashboard Dosen
+        if (auth()->user()->role == 'dosen') {
 
-            return view('dashboard.dosen', compact('totalMahasiswa'));
+            $totalMahasiswa = User::where(
+                'role',
+                'mahasiswa'
+            )->count();
+
+            return view(
+                'dashboard.dosen',
+                compact('totalMahasiswa')
+            );
         }
 
-        return view('dashboard.mahasiswa');
+        // Dashboard Mahasiswa
+        $totalPortofolio = Portofolio::where(
+            'user_id',
+            auth()->id()
+        )->count();
+
+        return view(
+            'dashboard.mahasiswa',
+            compact('totalPortofolio')
+        );
     }
 }
-use App\Models\Portofolio;
-
-$totalPortofolio = Portofolio::where(
-    'user_id',
-    auth()->id()
-)->count();
-return view('dashboard', compact(
-    'totalPortofolio'
-));
