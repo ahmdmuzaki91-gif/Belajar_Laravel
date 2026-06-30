@@ -36,7 +36,7 @@
         </h3>
 
         <p class="text-4xl font-bold text-green-600 mt-2">
-            0
+            {{ $totalPortofolio }}
         </p>
 
     </div>
@@ -48,9 +48,8 @@
         </h3>
 
         <p class="text-4xl font-bold text-indigo-600 mt-2">
-            0
+        {{ $totalDisetujui }}
         </p>
-
     </div>
 
     <div class="bg-white rounded-2xl shadow p-6">
@@ -60,7 +59,7 @@
         </h3>
 
         <p class="text-4xl font-bold text-orange-500 mt-2">
-            0
+        {{ $totalPending }}
         </p>
 
     </div>

@@ -20,6 +20,7 @@ class Portofolio extends Model
         'file_portofolio',
         'github',
         'demo',
+        'status'
     ];
 
     public function user()

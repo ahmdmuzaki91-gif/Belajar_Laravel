@@ -72,6 +72,14 @@
     </svg>
     <span>Data Mahasiswa</span>
 </a>
+                <a href="{{ route('review.index') }}"
+       class="block p-3 rounded-lg hover:bg-blue-800 transition flex items-center space-x-2 text-white">
+
+    <i class="fa-solid fa-file-circle-check"></i>
+
+    <span>Review Portofolio</span>
+
+</a>
 
             @endif
 
