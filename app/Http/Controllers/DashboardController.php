@@ -11,24 +11,26 @@ class DashboardController extends Controller
     {
         if (auth()->user()->role == 'dosen') {
 
-    $totalMahasiswa = User::where('role', 'mahasiswa')->count();
+            $totalMahasiswa = Portofolio::distinct('user_id')->count('user_id');
+            $totalPortofolio = Portofolio::count();
+            $totalDisetujui = Portofolio::where('status', 'approved')->count();
+            $totalPending = Portofolio::where('status', 'pending')->count();
 
-    $totalPortofolio = Portofolio::count();
-
-    $totalDisetujui = Portofolio::where('status', 'approved')->count();
-
-    $totalPending = Portofolio::where('status', 'pending')->count();
-
-    return view('dashboard.dosen', compact(
-        'totalMahasiswa',
-        'totalPortofolio',
-        'totalDisetujui',
-        'totalPending'
-    ));
-}
+            return view('dashboard.dosen', compact(
+                'totalMahasiswa',
+                'totalPortofolio',
+                'totalDisetujui',
+                'totalPending'
+            ));
+        }
 
         $portofolio = Portofolio::where('user_id', auth()->id())->get();
 
-        return view('dashboard.mahasiswa', compact('portofolio'));
+        $totalPortofolio = $portofolio->count();
+
+        return view('dashboard.mahasiswa', compact(
+            'portofolio',
+            'totalPortofolio'
+        ));
     }
 }
