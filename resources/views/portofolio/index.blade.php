@@ -47,104 +47,104 @@
 
             @foreach($portofolios as $portofolio)
 
-                <tr class="border-b hover:bg-gray-50">
+            <tr class="border-b hover:bg-gray-50">
 
-                    <td class="p-4">
-                        @if($portofolio->thumbnail)
-                            <img src="{{ asset('storage/'.$portofolio->thumbnail) }}"
-                                 alt="thumbnail"
-                                 class="w-24 h-16 object-cover rounded-lg shadow">
-                        @else
-                            <span class="text-gray-400">
-                                Tidak ada gambar
-                            </span>
-                        @endif
-                    </td>
-
-                    <td class="p-4">
-                        <div class="font-semibold text-gray-800">
-                            {{ $portofolio->judul }}
-                        </div>
-                    <td class="p-4">
-
-            @if($portofolio->status == 'pending')
-                 <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
-            ⏳ Menunggu Review
-                </span>
-
-            @elseif($portofolio->status == 'approved')
-                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
-            ✅ Disetujui
-                </span>
-
-            @else
-                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
-            ❌ Ditolak
-                </span>
-            @endif
-
-            </td>
-                        <div class="text-sm text-gray-500">
-                            {{ Str::limit($portofolio->deskripsi, 60) }}
-                        </div>
-                    </td>
-
-                    <td class="p-4">
-                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">
-                            {{ $portofolio->kategori }}
+                <td class="p-4">
+                    @if($portofolio->thumbnail)
+                        <img src="{{ asset('storage/' . $portofolio->thumbnail) }}"
+                            alt="thumbnail"
+                            class="w-24 h-16 object-cover rounded-lg shadow">
+                    @else
+                        <span class="text-gray-400">
+                            Tidak ada gambar
                         </span>
-                    </td>
+                    @endif
+                </td>
 
-                    <td class="p-4">
-                        @if($portofolio->github)
-                            <a href="{{ $portofolio->github }}"
-                               target="_blank"
-                               class="text-blue-600 hover:underline">
-                                Github
-                            </a>
-                        @else
-                            -
-                        @endif
-                    </td>
+                <td class="p-4">
+                    <div class="font-semibold text-gray-800">
+                        {{ $portofolio->judul }}
+                    </div>
 
-                    <td class="p-4">
-                        @if($portofolio->demo)
-                            <a href="{{ $portofolio->demo }}"
-                               target="_blank"
-                               class="text-green-600 hover:underline">
-                                Demo
-                            </a>
-                        @else
-                            -
-                        @endif
-                    </td>
+                    <div class="text-sm text-gray-500">
+                        {{ Str::limit($portofolio->deskripsi, 60) }}
+                    </div>
+                </td>
 
-                    <td class="p-4">
-                        <div class="flex justify-center gap-2">
+                <td class="p-4">
+                    @if($portofolio->status == 'pending')
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                            ⏳ Menunggu Review
+                        </span>
 
-                            <a href="{{ route('portofolio.edit', $portofolio->id) }}"
-                               class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-2 rounded">
-                                Edit
-                            </a>
+                    @elseif($portofolio->status == 'approved')
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                            ✅ Disetujui
+                        </span>
 
-                            <form action="{{ route('portofolio.destroy', $portofolio->id) }}"
-                                  method="POST"
-                                  onsubmit="return confirm('Yakin ingin menghapus portofolio ini?')">
+                    @else
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
+                            ❌ Ditolak
+                        </span>
+                    @endif
+                </td>
 
-                                @csrf
-                                @method('DELETE')
+                <td class="p-4">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">
+                        {{ $portofolio->kategori }}
+                    </span>
+                </td>
 
-                                <button type="submit"
-                                        class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded">
-                                    Hapus
-                                </button>
+                <td class="p-4">
+                    @if($portofolio->github)
+                        <a href="{{ $portofolio->github }}"
+                        target="_blank"
+                        class="text-blue-600 hover:underline">
+                            Github
+                        </a>
+                    @else
+                        -
+                    @endif
+                </td>
 
-                            </form>
+                <td class="p-4">
+                    @if($portofolio->demo)
+                        <a href="{{ $portofolio->demo }}"
+                        target="_blank"
+                        class="text-green-600 hover:underline">
+                            Demo
+                        </a>
+                    @else
+                        -
+                    @endif
+                </td>
 
-                        </div>
-                    </td>
+                <td class="p-4">
+                    <div class="flex justify-center gap-2">
 
-                </tr>
+                        <a href="{{ route('portofolio.edit', $portofolio->id) }}"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-2 rounded">
+                            Edit
+                        </a>
+
+                        <form action="{{ route('portofolio.destroy', $portofolio->id) }}"
+                            method="POST"
+                            onsubmit="return confirm('Yakin ingin menghapus portofolio ini?')">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded">
+                                Hapus
+                            </button>
+
+                        </form>
+
+                    </div>
+                </td>
+
+            </tr>
 
             @endforeach
 
