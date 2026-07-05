@@ -28,7 +28,7 @@
         </h3>
 
         <p class="text-4xl font-bold text-blue-600 mt-2">
-            {{ $portofolio->count() }}
+            {{ $totalPortofolio }}
         </p>
 
     </div>
